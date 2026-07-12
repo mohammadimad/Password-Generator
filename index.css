@@ -1,3 +1,107 @@
 body {
     margin: 0;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* تهيئة الخلفية لتتوسط الصفحة بشكل كامل */
+body {
+    background-color: #131921; /* خلفية داكنة جداً للفصل بين الكروت */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* الكارد الرئيسي المستوحى من ألوان التصميم */
+.generator-card {
+    background-color: #1F2937; /* اللون الداكن المائل للأزرق/الرمادي */
+    max-width: 450px;
+    width: 100%;
+    padding: 48px;
+    border-radius: 8px; /* حواف ناعمة وخفيفة كما في الصورة */
+}
+
+/* العناوين والنصوص */
+.title {
+    color: #FFFFFF;
+    font-size: 2.25rem; /* حجم خط كبير وواضح */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    color: #10B981; /* اللون الأخضر المميز المشرق */
+}
+
+.subtitle {
+    color: #D1D5DB; /* لون رمادي فاتح للنص الفرعي */
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+/* زر التوليد */
+.generate-btn {
+    background-color: #10B981;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 32px;
+}
+
+.generate-btn:hover {
+    background-color: #059669; /* تأثير خفيف عند تمرير الفأرة */
+}
+
+/* الخط الفاصل */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #2D3748; /* خط داكن هادئ لا يشتت العين */
+    margin-bottom: 32px;
+}
+
+/* حاوية صناديق كلمات المرور */
+.passwords-container {
+    display: flex;
+    gap: 16px; /* مسافة بين الصندوقين */
+}
+
+/* صناديق عرض كلمات المرور */
+.password-box {
+    flex: 1;
+    background-color: #273549; /* لون الصناديق الداكن */
+    color: #55F9B7; /* لون كلمة المرور الأخضر الفاتح */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 14px 10px;
+    border-radius: 6px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: all; /* يتيح للمستخدم تحديد النص بالكامل بنقرة واحدة لنسخه */
+}
+
+/* تحسين العرض على الشاشات الصغيرة جداً */
+@media (max-width: 400px) {
+    .passwords-container {
+        flex-direction: column; /* ترتيب رأسي إذا كانت الشاشة ضيقة جداً */
+    }
+    .generator-card {
+        padding: 32px 24px;
+    }
+}

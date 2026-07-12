@@ -2,5 +2,18 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 
+let pass1 = document.getElementById("pass1");
+let pass2 = document.getElementById("pass2");
 
+function Generateor(){
+    pass1.textContent = " ";
+    pass2.textContent = " ";
+    for (let i = 0; i < 15; i++){
+        let index1 = Math.floor(Math.random() * characters.length);
+        let index2 = Math.floor(Math.random() * characters.length);
+        
+        pass1.textContent += characters[index1];
+        pass2.textContent += characters[index2];
+    }
+}
 
